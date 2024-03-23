@@ -1,0 +1,78 @@
+.form_main {
+    display: flex;
+    flex-direction: column;
+}
+
+.caja {
+    margin-left: 5.5rem;
+    margin-right: .7rem;
+    padding-top: 1.7rem;
+}
+
+.caja h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secundary-color);
+    font-family: 'Montserrat';
+    font-weight: 900;
+    letter-spacing: .3rem;
+}
+
+.main__fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    border: 3px solid var(--secundary-color);
+    border-left: none;
+    border-right: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__legend {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    text-align: center;
+    color: var(--secundary-color);
+}
+
+.form_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_ent,
+.form_num,
+.form_pin,
+.form_csv {
+    display: flex;
+    flex-direction: row;
+    width: 24rem;
+    font-family: 'Montserrat';
+    color: var(--secundary-color);
+    font-weight: 800;
+    align-items: center;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.form_ent>input,
+.form_num>input,
+.form_pin>input,
+.form_csv>input {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: var(--secundary-color);
+    padding: .3rem;
+    width: 15rem;
+    border: none;
+    border-bottom: 2px solid var(--secundary-color);
+    background-color: var(--primary-color);
+}

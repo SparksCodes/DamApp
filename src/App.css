@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Montserrat-VariableFont_wght';
+  src: local('Montserrat-VariableFont_wght'), url('../src/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 150%;
+}
+
+@font-face {
+  font-family: 'Truculenta-VariableFont_opsz_wdth_wght';
+  src: local('Truculenta-VariableFont_opsz_wdth_wght'), url('../src/fonts/Truculenta-VariableFont_opsz_wdth_wght.ttf') format('truetype');
+}
+
+:root {
+  --primary-color: #E8DFCF;
+  --secundary-color: #3C443F;
+  --third-color: #D23D3D;
+  --forth-color: #D3D3D3;
+  --orange-color: #fc863ccb;
+  --green-color: #9ACD32;
+  --blue-color: #6CBEEF;
+  --yellow-color: #FFFF99;
+
+  --primary-font: 'Montserrat-VariableFont_wght';
+  --secundary-font: 'Truculenta-VariableFont_opsz_wdth_wght';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+input::placeholder {
+  font-family: 'Montserrat';
+  font-size: .8rem;
+  color: #3c443f57;
+}

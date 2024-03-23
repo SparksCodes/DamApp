@@ -1,0 +1,99 @@
+aside {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    padding: .5rem;
+    height: 100vh;
+    font-family: var(--secundary-font);
+    background: var(--secundary-color);
+    z-index: 5;
+}
+
+a {
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+
+.aside__side {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+svg {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    fill: var(--primary-color);
+}
+
+.aside__all__show {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: .9rem;
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 0 .8rem .8rem 0;
+    position: absolute;
+    width: 9rem;
+    left: 4.5rem;
+    padding: .6rem;
+    padding-right: .9rem;
+    text-align: right;
+    position: fixed;
+    top: 7rem;
+}
+
+.aside__all__show span {
+    z-index: 5;
+}
+
+.aside__all__cards {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: .9rem;
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 0 .8rem .8rem 0;
+    position: absolute;
+    width: 9rem;
+    left: 4.5rem;
+    padding: .6rem;
+    padding-right: .9rem;
+    text-align: right;
+    position: fixed;
+    top: 13.2rem;
+}
+
+.aside__all__account {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: .9rem;
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 0 .8rem .8rem 0;
+
+    width: 9rem;
+    left: 4.5rem;
+    padding: .6rem;
+    padding-right: .9rem;
+    text-align: right;
+    position: fixed;
+    top: 19.3rem;
+}
+
+.aside__all__apps {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: .9rem;
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 0 .8rem .8rem 0;
+    position: absolute;
+    width: 9rem;
+    left: 4.5rem;
+    padding: .6rem;
+    padding-right: .9rem;
+    text-align: right;
+    top: 25.5rem;
+}

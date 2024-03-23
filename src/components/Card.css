@@ -1,0 +1,48 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 12rem;
+    height: 12rem;
+    box-shadow: 2px 2px 8px;
+}
+
+.box::after {
+    position: relative;
+    bottom: 9.5rem;
+    left: .2rem;
+    content: "";
+    width: 0rem;
+    height: .7rem;
+    background-color: var(--orange-color);
+    z-index: 0;
+    transition: width 0.3s ease-in-out;
+
+}
+
+.box h1 {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.box:hover::after {
+    width: 11.5rem;
+
+}
+
+.box__logo img {
+    color: var(--orange-color);
+    stroke: 2rem;
+}
+
+.box a {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--secundary-color);
+    cursor: pointer;
+}

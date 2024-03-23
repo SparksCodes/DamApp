@@ -1,0 +1,10 @@
+.caja h1 {
+    margin-bottom: 1rem;
+}
+
+.container__AppData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .7rem;
+}
