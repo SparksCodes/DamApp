@@ -1,75 +1,75 @@
-
 import { useState } from "react";
+import connection from "../dbConnection.ts";
+import  readData  from "../dbGetData.ts";
 import "./CreditCard.css";
 
-interface FormData {
-  entidad: string;
-  numero: string;
-  pin: string;
-  csv: string;
-}
-
-interface CreditCardsProps {
-  onFormSubmit: (data: FormData) => void;
-}
-
-function CreditCards({ onFormSubmit }: CreditCardsProps) {
-
-
-    const [formCard, setFormCard] = useState<FormData>({
-      entidad: '',
-      numero: '',
-      pin: '',
-      csv: '',
-    });
-
-  const [data, setData] = useState([]);
-
+function CreditCards() {
+  const [formCard, setFormCard] = useState({
+    entidad: "",
+    numero: "",
+    pin: "",
+    csv: "",
+  });
 
   const getDataForm = (event: any) => {
     const { name, value } = event.target;
-    
+
     setFormCard({
       ...formCard,
       [name]: value,
     });
   };
 
+  function dataget(): void {
+    readData("creditCard")
+      .then((data: any[]) => {
+        const tableContainer: HTMLDivElement | null = document.getElementById("tableContainer");
+  
+        if (tableContainer) {
+         
+          const table: HTMLTableElement = document.createElement("table");
+  
+          const headerRow: HTMLTableRowElement = table.createTHead().insertRow();
+          const headers: string[] = ["ID", "Entidad", "Número", "PIN", "CSV"];
+          headers.forEach((header: string) => {
+            const cell = headerRow.insertCell();
+            cell.textContent = header;
+          });
+  
+          const body: HTMLTableSectionElement = table.createTBody();
+          data.forEach((item: any) => {
+            const row: HTMLTableRowElement = body.insertRow();
+            row.insertCell().textContent = item.id;
+            row.insertCell().textContent = item.entidad;
+            row.insertCell().textContent = item.numero;
+            row.insertCell().textContent = item.pin;
+            row.insertCell().textContent = item.csv;
+          });
+  
+          tableContainer.innerHTML = '';
+          tableContainer.appendChild(table);
+        } else {
+          console.error("El contenedor tableContainer no fue encontrado.");
+        }
+  
+        console.log("Datos de las tarjetas de crédito:", data);
+      })
+      .catch((error: any) => {
+        console.error("Error al leer los datos:", error);
+      });
+  }
+
   const handleSubmit = async (event: any) => {
     event.preventDefault();
 
-    const formData = { ...formCard };
- 
-    setData([...data, formData]);
+    connection("creditCard", formCard);
 
-    
-
-    // const folderPath = path.join(__dirname, 'archivos_csv');
-    // if (!fs.existsSync(folderPath)) {
-    //   fs.mkdirSync(folderPath);
-    // }
-
-    // // Crear el archivo CSV
-    // const csvData = `${formData.entidad},${formData.numero},${formData.pin},${formData.csv}\n`;
-
-    // const filePath = path.join(folderPath, 'tarjetas.csv');
-    // fs.appendFile(filePath, csvData, (err: any) => {
-    //   if (err) {
-    //     console.error('Error al guardar el archivo CSV:', err);
-    //     return;
-    //   }
-    //   console.log('Datos guardados en el archivo CSV correctamente.');
-    // });
-    
-    
     setFormCard({
       entidad: "",
       numero: "",
       pin: "",
       csv: "",
     });
-    
-    console.log(data);
   };
 
   return (
@@ -129,8 +129,10 @@ function CreditCards({ onFormSubmit }: CreditCardsProps) {
               </form>
             </div>
           </fieldset>
-
-          <div className="card_draw"></div>
+          <div className="card_draw">
+            <button onClick={dataget}>Obtener Datos</button>
+            <div id="tableContainer"></div>
+          </div>
         </div>
       </div>
     </>

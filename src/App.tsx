@@ -13,17 +13,14 @@ function App() {
     setActualPage(page);
   };
 
-  const handleFormSubmit = (formData: any) => {
-    console.log('Datos del formulario:', formData);
-  };
-
+ 
   return (
     <>
       <div>
         <SideBar mostrarComponente={mostrarComponente} />
 
         {actualPage === "all" && <PasswordGenerator />}
-        {actualPage === "cards" && <CreditCards onFormSubmit={handleFormSubmit} />}
+        {actualPage === "cards" && <CreditCards />}
         {actualPage === "account" && <BankAccounts />}
         {actualPage === "apps" && <WholeApps />}
       </div>

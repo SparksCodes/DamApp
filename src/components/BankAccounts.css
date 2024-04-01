@@ -1,0 +1,47 @@
+
+.result{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+.result button{
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--secundary-color);
+    border: 2px solid var(--secundary-color);
+    border-left: none;
+    border-right: none;
+    background-color: var(--primary-color);
+    width: 20vw;
+    padding: .3rem;
+    margin-top: .5rem;
+}
+
+.result button:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-left: none;
+    border-right: none;
+    background-color: var(--secundary-color);
+}
+
+#tableCount{
+    font-family: "Montserrat";
+    font-size: 0.8rem;
+    width: 25rem;
+    color: var(--secundary-color);
+    border-collapse: collapse;
+}
+
+thead{
+    width: 30rem;
+    font-size: 1rem;
+    font-weight: 600;  
+    color: var(--orange-color);
+    background-color: var(--secundary-color);
+}

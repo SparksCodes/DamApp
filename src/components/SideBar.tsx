@@ -32,7 +32,7 @@ function SideBar({ mostrarComponente }) {
     setShowApps(false);
   };
 
-  const markApp = (item) => {
+  const markApp = (item: String) => {
     switch (item) {
       case "all":
         setMarkAll(true);
@@ -160,6 +160,11 @@ function SideBar({ mostrarComponente }) {
         >
           Aplicaciones
         </div>
+      </div>
+      <div className="myName">
+      <p id="myName_course">2ºDAM</p>
+      <p id="myName_name">Pedro</p>
+      <p id="myName_surname">Monserrat</p>
       </div>
     </aside>
   );

@@ -1,4 +1,5 @@
 import "./PasswordGenerator.css";
+import connection from "../dbConnection.ts";
 import { useState } from "react";
 
 function PasswordGenerator() {
@@ -20,6 +21,8 @@ function PasswordGenerator() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+
+    connection("passwords", form);
 
     setForm({
       aplicacion: "",

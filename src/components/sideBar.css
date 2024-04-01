@@ -97,3 +97,19 @@ svg {
     text-align: right;
     top: 25.5rem;
 }
+
+.myName {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    font-size: .73rem;
+    color: var(--primary-color);
+    position: relative;
+    top: 3.5rem;
+}
+
+#myName_course {
+    font-weight: 800;
+    letter-spacing: .23rem;
+
+}
