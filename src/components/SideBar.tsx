@@ -1,7 +1,7 @@
 import "./sideBar.css";
 import { useState } from "react";
 
-function SideBar({ mostrarComponente }) {
+function SideBar({ mostrarComponente }: any) {
   const [showAside, setShowAside] = useState(false);
   const [showCards, setShowCards] = useState(false);
   const [showAccount, setShowAccount] = useState(false);

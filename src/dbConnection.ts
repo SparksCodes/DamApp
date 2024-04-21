@@ -19,15 +19,6 @@ export default function connection(tab: String, data: any) {
   // Abre o crea una base de datos en IndexedDB
   const request = indexedDB.open(`${page}`, 1);
 
-  request.onupgradeneeded = function (event: any) {
-    // Crea un almacén de objetos dentro de la base de datos
-    const db = event.target.result;
-    const objectStore = db.createObjectStore(`${tab}`, {
-      keyPath: "id",
-      autoIncrement: true,
-    });
-  };
-
   request.onsuccess = function (event: any) {
     // Accede a la base de datos
     const db = event.target.result;

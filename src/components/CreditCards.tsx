@@ -20,10 +20,13 @@ function CreditCards() {
     });
   };
 
+  
+  
+
   function dataget(): void {
     readData("creditCard")
-      .then((data: any[]) => {
-        const tableContainer: HTMLDivElement | null = document.getElementById("tableContainer");
+      .then( (data: any[]) => {
+        const tableContainer: HTMLElement | null = document.getElementById("tableContainer");
   
         if (tableContainer) {
          

@@ -1,4 +1,4 @@
-export default function readData(tab: any) {
+export default function readData(tab: String): Promise<any[]>  {
     let page = "";
   
     switch (tab) {

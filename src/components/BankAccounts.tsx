@@ -21,8 +21,8 @@ function BankAccounts() {
 
   function dataget(): void {
     readData("bankAccount")
-      .then((data: any[]) => {
-        const tableContainer: HTMLDivElement | null = document.getElementById("tableCount");
+      .then(data => {
+        const tableContainer: HTMLElement | null = document.getElementById("tableCount");
   
         if (tableContainer) {
          

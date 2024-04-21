@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import SideBar from "./components/SideBar.tsx";
 import PasswordGenerator from "./components/PasswordGenerator.tsx";
-import CreditCards from "./components/CreditCards.js";
-import BankAccounts from "./components/BankAccounts.js";
+import CreditCards from "./components/CreditCards.tsx";
+import BankAccounts from "./components/BankAccounts.tsx";
 import WholeApps from "./components/WholeApps.js";
 
 function App() {
